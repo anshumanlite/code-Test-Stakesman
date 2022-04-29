@@ -1,0 +1,124 @@
+<html>  
+<head> 
+ 
+<style>  
+.dropbtn {  
+  background-color: rgb(85, 99, 200);  
+  color: white;  
+  padding: 14px;  
+  font-size: 16px;  
+  cursor: pointer;  
+}  
+  
+  
+  
+.dropdown {  
+  position: relative;  
+  display: inline-block;  
+}  
+  
+.dropdown-content {  
+  display: none;  
+  position: absolute;  
+  background-color: rgb(233, 126, 203);  
+  min-width: 140px;  
+  overflow: auto;  
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  
+}  
+  
+.dropdown-content a {  
+  color: black;  
+  padding: 12px 16px;  
+  text-decoration: none;  
+  display: block;  
+}  
+  
+.dropdown a:hover {  
+   background-color: #ddd;  
+ }  
+  
+.show {  
+  display: block;  
+}  
+</style>  
+</head>  
+<body>  
+  
+<h2 style="font-style: bold;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">List of states</h2>  
+<p style="font-style: italic;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Click on the button to open the states  dropdown menu and view their Districts.</p>  
+  
+<div class="dropdown">  
+  <button onclick="stateList()" class="dropbtn">state</button>  
+  <div id="statedropdown" class="dropdown-content">  
+    <a href="#" onclick="Rajasthan()">Rajasthan</a>  
+    <a href="#" onclick="Maharashtra()">Maharashtra</a>  
+    <a href="#" onclick="Tamil_Nadu()">Tamil Nadu</a>  
+    <a href="#" onclick="Punjab()">Punjab</a>  
+    <a href="#" onclick="Uttar_Pradesh()">U.P</a>
+  </div>  
+</div>  
+
+<script>  
+    /* methods to hide and show the dropdown content */  
+    function stateList() {  
+      document.getElementById("statedropdown").classList.toggle("show");  
+    }  
+      
+    
+       
+    function Rajasthan() {  
+        var arr1=["Kota", "Jaipur", "SriGanganagar", "Jodhpur", "Udaipur"];
+        document.write("Rajasthan Districts:<br/>");
+            for(var i=0;i<arr1.length;i++)
+               document.write(arr1[i]+"<br/>");
+    }  
+    function Maharashtra() {  
+        var arr2=["Pune", "Mumbai","Nagpur", "Latur"];
+        document.write("Maharashtra Districts:<br/>");
+            for(var i=0;i<arr2.length;i++)
+               document.write(arr2[i]+"<br/>");
+      
+    }  
+    function Tamil_Nadu() {  
+        var arr3=["Chennai", "Pondichery", "Nellore", "Vellore", "Kanchipuram"];
+        document.write("Tamil Nadu Districts:<br/>");
+            for(var i=0;i<arr3.length;i++)
+               document.write(arr3[i]+"<br/>");
+    }  
+    function Punjab() {  
+        var arr4=["Chandigarh", "Sultanpur","Bhatinda","Amritsar","Ambala", "Pathankoth"];
+        document.write("Punjab Districts:<br/>");
+            for(var i=0;i<arr4.length;i++)
+               document.write(arr4[i]+"<br/>");}
+    
+    function Uttar_Pradesh(){
+        var arr5=["Lucknow", "Benaras","Bareli", "Kanpur", "Jhansi"];
+        document.write("U.P Districts:<br/>");
+            for(var i=0;i<arr5.length;i++)
+               document.write(arr5[i]+"<br/>");
+   
+    }
+    
+      
+ //   Close the dropdown menu if the user clicks outside of it  
+    window.onclick = function(event) {  
+      if (!event.target.matches('.dropbtn')) {  
+        var dropdowns = document.getElementsByClassName("dropdown-content");  
+        var i;  
+        for (i = 0; i < dropdowns.length; i++) {  
+          var openDropdown = dropdowns[i];  
+          if (openDropdown.classList.contains('show')) {  
+            openDropdown.classList.remove('show');  
+          }  
+        }  
+      
+    }
+}
+    </script> 
+  
+ 
+ 
+
+  
+</body>  
+</html>
